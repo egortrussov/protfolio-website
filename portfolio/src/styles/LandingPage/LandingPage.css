@@ -1,0 +1,73 @@
+.hero {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 110%;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  left: -0%;
+  bottom: -5%;
+  padding-bottom: 0 !important;
+}
+
+.hero .layer {
+  width: 120vw;
+  top: auto !important;
+  bottom: 0 !important;
+  margin-top: auto;
+  margin-bottom: 0 !important;
+  margin-right: 0;
+}
+
+.hero .layer img {
+  position: relative;
+  margin-top: auto;
+  margin-bottom: 0;
+  width: 100%;
+  max-width: 100% !important;
+}
+
+.hero .layer.layer1 {
+  bottom: 0;
+  margin-bottom: 0 !important;
+}
+
+.hero .layer.layer1 img {
+  max-height: 50vh;
+  width: 100% !important;
+}
+
+.hero .layer.layer2 img {
+  max-height: 60vh;
+  width: 100% !important;
+}
+
+.hero .layer.layer3 img {
+  max-height: 60vh;
+  width: 100% !important;
+}
+
+.hero .layer.layer4 img {
+  max-height: 80vh;
+  width: 100% !important;
+}
+
+.hero .layer.layer5 {
+  height: 100% !important;
+  min-height: 100%;
+}
+
+.hero .layer.layer5 img {
+  height: 100vh;
+}
+/*# sourceMappingURL=LandingPage.css.map */

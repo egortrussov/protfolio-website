@@ -1,0 +1,61 @@
+.hero {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 110%;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  left: -10%;
+}
+
+.hero .layer {
+  width: 120vw;
+  top: auto !important;
+  bottom: 0 !important;
+  margin-top: auto;
+  margin-bottom: 0 !important;
+  margin-right: 0;
+}
+
+.hero .layer img {
+  width: 100%;
+  max-width: 100% !important;
+}
+
+.hero .layer.div1 {
+  height: 100%;
+  background-color: #ccc;
+  z-index: 0;
+}
+
+.hero .layer.div2 {
+  height: 50%;
+  background-color: #bbb;
+  z-index: 1;
+}
+
+.hero .layer.div3 {
+  height: 30%;
+  background-color: #aaa;
+  z-index: 2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow: hidden;
+}
+/*# sourceMappingURL=main.css.map */
