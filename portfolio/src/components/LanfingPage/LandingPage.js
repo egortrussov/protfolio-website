@@ -7,7 +7,10 @@ export default class LandingPage extends Component {
     render() {
         return (
             <div className="landing">
-                <Hero />
+                <div className="hero-container">
+                    <Hero />
+
+                </div>
             </div>
         )
     }

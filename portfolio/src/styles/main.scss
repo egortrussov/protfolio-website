@@ -1,10 +1,16 @@
 @import './LandingPage/LandingPage';
+@import './config';
 
 * {
     margin: 0;
     padding: 0;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     overflow: hidden;
+    font-family: $main-font-family;
 }

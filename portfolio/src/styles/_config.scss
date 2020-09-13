@@ -1,0 +1,19 @@
+$main-font-family: 'Nunito', sans-serif;
+
+@mixin desktop-sm {
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+@mixin tablet-lg {
+    @media (max-width: 750px) {
+        @content;
+    }
+}
+
+@mixin tablet-md {
+    @media (max-width: 500px) {
+        @content;
+    }
+}
+
