@@ -167,6 +167,33 @@
 
     &.hidden {
         top: -105vh;
+
+        .layer {
+
+            &.layer1 {
+                
+                img {
+                    transition: 1s;
+                    max-height: 80vh !important;
+                    height: 80vh !important;
+                    max-width: 120% !important;
+                    width: 120% !important;
+                    transform: translateX(-10%);
+                }
+            }
+
+            &.layer2 {
+                
+                img {
+                    transition: 1s;
+                    max-height: 75vh !important;
+                    height: 75vh !important;
+                    max-width: 110% !important;
+                    width: 110% !important;
+                    transform: translateX(-5%);
+                }
+            }
+        }
     }
 
     &.shown {
@@ -176,7 +203,7 @@
 
 .about {
     background-color: #002a25;
-    height: 100vh;
+    height: 105vh;
     width: 100%;
     transition: $transitionTime;
 
