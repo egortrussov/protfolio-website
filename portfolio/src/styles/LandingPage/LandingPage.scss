@@ -162,4 +162,31 @@
             }
         }
     }
+
+    transition: $transitionTime;
+
+    &.hidden {
+        top: -105vh;
+    }
+
+    &.shown {
+        top: 0;
+    }
+}
+
+.about {
+    background-color: #002a25;
+    height: 100vh;
+    width: 100%;
+    transition: $transitionTime;
+
+    &.hidden {
+        bottom: -100%;
+        top: auto;
+    }
+
+    &.shown {
+        bottom: 0;
+        top: 0;
+    }
 }

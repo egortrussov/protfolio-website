@@ -25,6 +25,8 @@
   bottom: 0;
   padding-bottom: 0 !important;
   background-color: #002a25;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .hero .logo {
@@ -46,6 +48,12 @@
   .hero .logo {
     z-index: 3;
     top: 53% !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero .logo {
+    top: 50% !important;
   }
 }
 
@@ -186,6 +194,14 @@
 
 .hero .layer.layer5 img {
   height: 100vh;
+}
+
+.hero.hidden {
+  top: -105vh;
+}
+
+.hero.shown {
+  top: 0;
 }
 
 * {

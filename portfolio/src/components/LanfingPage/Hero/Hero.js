@@ -27,18 +27,20 @@ export default class Hero extends Component {
     }
 
     render() {
+        const { extraClass } = this.props;
+
         return (
-            <div ref={ this.sceneRef } className="hero">
+            <div ref={ this.sceneRef } className={ 'hero ' + extraClass }>
                 <div data-depth="0.1" className="layer layer5">
                     <img src={ Layer5 } alt=""/>
                 </div>
-                <div data-depth="0.2" className="layer layer4">
+                <div data-depth="0.13" className="layer layer4">
                     <img src={ Layer4 } alt=""/>
                 </div>
-                <div className="logo">
-                    <h1>front-end developer <br/> designer</h1>
+                <div data-depth="0.2" className="logo">
+                    <h1 data-depth="0.2">front-end developer <br/> designer</h1>
                 </div>
-                <div data-depth="0.25" className="layer layer3">
+                <div data-depth="0.2" className="layer layer3">
                     <img src={ Layer3 } alt=""/>
                 </div>
                 <div data-depth="0.3" className="layer layer2">

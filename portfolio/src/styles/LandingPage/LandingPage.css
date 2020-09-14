@@ -25,6 +25,8 @@
   bottom: 0;
   padding-bottom: 0 !important;
   background-color: #002a25;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .hero .logo {
@@ -192,5 +194,31 @@
 
 .hero .layer.layer5 img {
   height: 100vh;
+}
+
+.hero.hidden {
+  top: -105vh;
+}
+
+.hero.shown {
+  top: 0;
+}
+
+.about {
+  background-color: #002a25;
+  height: 100vh;
+  width: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.about.hidden {
+  bottom: -100%;
+  top: auto;
+}
+
+.about.shown {
+  bottom: 0;
+  top: 0;
 }
 /*# sourceMappingURL=LandingPage.css.map */
