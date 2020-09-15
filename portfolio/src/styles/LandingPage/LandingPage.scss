@@ -25,11 +25,11 @@
     .logo {
         @include desktop-sm {
             z-index: 3;
-            top: 53% !important;
+            top: 48% !important;
         }
 
         @include tablet-md {
-            top: 50% !important;
+            top: 48% !important;
         }
 
         position: absolute;
@@ -44,6 +44,7 @@
         text-transform: uppercase;
         text-shadow: 4px 2px 2px rgba(0, 0, 0, .2);
         width: 100%;
+        max-width: 95vw;
         z-index: 4;
 
         h1 {
@@ -163,7 +164,7 @@
         }
     }
 
-    transition: $transitionTime;
+    transition: $transitionTime !important;
 
     &.hidden {
         top: -105vh;
@@ -202,18 +203,32 @@
 }
 
 .about {
+    // position: absolute;
     background-color: #002a25;
     height: 105vh;
     width: 100%;
-    transition: $transitionTime;
+    transition: all $transitionTime;
+
+    &.ij {
+        background-color: #fff !important;
+    }
 
     &.hidden {
-        bottom: -100%;
-        top: auto;
+        position: absolute;
+
+        &.down {
+            bottom: -105vh;
+            top: auto;
+        } 
+
+        &.up {
+            top: -105vh;
+            bottom: auto;
+        }
     }
 
     &.shown {
-        bottom: 0;
-        top: 0;
+        bottom: 0 ;
+        top: 0 ;
     }
 }

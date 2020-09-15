@@ -38,7 +38,7 @@ export default class Hero extends Component {
                     <img src={ Layer4 } alt=""/>
                 </div>
                 <div data-depth="0.2" className="logo">
-                    <h1 data-depth="0.2">front-end developer <br/> designer</h1>
+                    <h1 data-depth="0.2">front-end developer <br/> Digital artist</h1>
                 </div>
                 <div data-depth="0.2" className="layer layer3">
                     <img src={ Layer3 } alt=""/>

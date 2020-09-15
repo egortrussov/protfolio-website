@@ -7,13 +7,13 @@ export default class LandingPage extends Component {
 
     state = {
         currentPage: 0,
-        pageNum: 2,
+        pageNum: 3,
         isAnimated: false,
         animProperties: {
             hide: null,
             show: null
         },
-        extraClasses: ['shown', 'hidden']
+        extraClasses: ['shown', 'hidden down', 'hidden down']
     }
 
     componentDidMount() {
@@ -40,7 +40,7 @@ export default class LandingPage extends Component {
                     show: currentPage + 1,
                     dir: 1
                 }
-                extraClasses[currentPage] = 'hidden';
+                extraClasses[currentPage] = 'hidden up';
                 extraClasses[currentPage + 1] = 'shown';
                 currentPage++;
             } else {
@@ -49,7 +49,7 @@ export default class LandingPage extends Component {
                     show: currentPage - 1,
                     dir: -1
                 }
-                extraClasses[currentPage] = 'hidden';
+                extraClasses[currentPage] = 'hidden down';
                 extraClasses[currentPage - 1] = 'shown';
                 currentPage--;
             } 
@@ -58,7 +58,7 @@ export default class LandingPage extends Component {
                 this.setState({
                     isAnimated: false
                 })
-            }, 500)
+            }, 1500)
 
             this.setState({
                 isAnimated: true,
@@ -81,6 +81,8 @@ export default class LandingPage extends Component {
                     <Hero extraClass={ extraClasses[0] } />
                     
                     <About extraClass={ extraClasses[1] } />
+
+                    <About extraClass={ extraClasses[2] + ' ij' } />
 
                 </div>
             </div>
