@@ -1,0 +1,77 @@
+@import './config';
+
+.heading {
+    color: #fff;
+    position: relative;
+
+    h1 {
+        position: relative;
+        z-index: 3;
+        font-size: 3.5rem;
+
+        span {
+            animation-duration: 1s;
+            animation-fill-mode: both;
+            animation-iteration-count: 1;
+            display: inline-block;
+            margin-right: 13px;
+
+            &:hover {
+                color: lighten($main-color, $amount: 60);
+                animation-name: rubberBand;
+            }
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 20%;
+        min-width: 50px;
+        height: 10px;
+        background-color: $main-color;
+        left: 0;
+        top: auto;
+        z-index: 2;
+        bottom: 10px;
+        transition: .3s;
+    }
+
+    &:hover {
+
+        &::after {
+            width: 100%;
+            bottom: 15px;
+        }
+    }
+}
+
+@keyframes rubberBand {
+    from {
+      transform: scale3d(1, 1, 1);
+    }
+  
+    30% {
+      transform: scale3d(1.25, 0.75, 1);
+    }
+  
+    40% {
+      transform: scale3d(0.75, 1.25, 1);
+    }
+  
+    50% {
+      transform: scale3d(1.15, 0.85, 1);
+    }
+  
+    65% {
+      transform: scale3d(.95, 1.05, 1);
+    }
+  
+    75% {
+      transform: scale3d(1.05, .95, 1);
+    }
+  
+    to {
+      transform: scale3d(1, 1, 1);
+    }
+  } 

@@ -7,7 +7,7 @@ export default class LandingPage extends Component {
 
     state = {
         currentPage: 0,
-        pageNum: 3,
+        pageNum: 2,
         isAnimated: false,
         animProperties: {
             hide: null,
@@ -81,8 +81,6 @@ export default class LandingPage extends Component {
                     <Hero extraClass={ extraClasses[0] } />
                     
                     <About extraClass={ extraClasses[1] } />
-
-                    <About extraClass={ extraClasses[2] + ' ij' } />
 
                 </div>
             </div>
