@@ -200,6 +200,23 @@
 
     &.shown {
         top: 0;
+
+        &.up {
+
+            .logo {
+                animation-delay: $transitionTime;
+            }
+        }
+            
+
+        .logo {
+            opacity: 0;
+            animation-duration: 1s;
+            animation-fill-mode: forwards; 
+            animation-iteration-count: 1;
+            animation-delay: 0;
+            animation-name: fade-logo;
+        }
     }
 }
 
@@ -231,6 +248,15 @@
     &.shown {
         bottom: 0 ;
         top: 0 ;
+
+        .container {
+            opacity: 0;
+            animation-duration: 1s;
+            animation-fill-mode: forwards; 
+            animation-iteration-count: 1;
+            animation-delay: $transitionTime;
+            animation-name: fade;
+        }
     }
 
     display: flex;
@@ -240,11 +266,11 @@
     .container {
         position: relative;
         display: flex;
-        width: 50%;
+        width: 90%;
         margin: auto;
         padding-top: 5rem;
         padding-left: 3rem;
-        min-width: 400px;
+        // min-width: 400px;
         max-width: 700px;
 
         .left {
@@ -255,11 +281,39 @@
         }
 
         .right {
+            @include tablet-lg {
+                font-size: 1.6rem;
+                letter-spacing: 1.4;
+            }
+
+            @include tablet-md {
+                font-size: 1.4rem;
+            }
+
             color: #fff;
             font-size: 1.8rem;
             font-weight: 700;
             letter-spacing: 1px;
             line-height: 1.5;
         }
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    } 100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fade-logo {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 100px) !important;
+    } 100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) !important;
     }
 }
