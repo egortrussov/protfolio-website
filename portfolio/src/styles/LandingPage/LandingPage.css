@@ -55,7 +55,43 @@
 
 .heading:hover::after {
   width: 100%;
-  bottom: 15px;
+}
+
+.btn {
+  position: relative;
+  padding: 1rem 2.2rem;
+  border: 3px solid #017a72;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 6;
+  cursor: pointer;
+}
+
+.btn span {
+  position: relative;
+  z-index: 8;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 0;
+  left: 0;
+  top: 0;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  background-color: #01ada1;
+  z-index: 7;
+}
+
+.btn:hover::before {
+  width: 100%;
 }
 
 @-webkit-keyframes rubberBand {
@@ -430,6 +466,7 @@
   width: 90%;
   margin: auto;
   padding-top: 5rem;
+  padding-bottom: 5rem;
   padding-left: 3rem;
   max-width: 700px;
 }
@@ -460,6 +497,14 @@
   .about .container .right {
     font-size: 1.4rem;
   }
+}
+
+.about .container .btn-box {
+  position: absolute;
+  bottom: 0;
+  top: auto;
+  left: auto;
+  right: 0;
 }
 
 @-webkit-keyframes fade {
