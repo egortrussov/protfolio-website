@@ -571,5 +571,7 @@ html {
 body {
   overflow: hidden;
   font-family: "Nunito", sans-serif;
+  background-color: #002a25;
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
