@@ -6,15 +6,18 @@ import Projects from './components/Projects/Projects'
 
 import './styles/main.css'
 import './styles/LandingPage/LandingPage.css'
+import ProjectsContextProvider from './context/ProjectsContext'
 
 export default class App extends Component {
     render() {
         return (
             <BrowserRouter>
-                <Switch>
-                    <Route exact path="/" component={ LandingPage } />
-                    <Route path="/projects" component={ Projects } />
-                </Switch>
+                <ProjectsContextProvider>
+                    <Switch>
+                        <Route exact path="/" component={ LandingPage } />
+                        <Route path="/projects" component={ Projects } />
+                    </Switch>
+                </ProjectsContextProvider>
             </BrowserRouter>
         )
     }

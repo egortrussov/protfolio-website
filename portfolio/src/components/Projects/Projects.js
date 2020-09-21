@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
+
 import ProjectsContainer from './ProjectsContainer/ProjectsContainer'
 import SwitchProjectsTab from './SwitchProjectsTab/SwitchProjectsTab'
+
+import { ProjectsContext } from '../../context/ProjectsContext';
 
 export default class Projects extends Component {
 
@@ -18,6 +21,13 @@ export default class Projects extends Component {
             type: typeToSet
         })
     }
+
+    static contextType = ProjectsContext;
+
+    componentDidMount() {
+        console.log(this.context.getProjectById(1))
+    }
+    
 
     render() {
 
