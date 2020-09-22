@@ -102,6 +102,10 @@
 }
 
 .page-container {
+  @include tablet-md {
+    padding: 2rem 1rem
+  }
+
   padding: 3rem 2rem
 }
 

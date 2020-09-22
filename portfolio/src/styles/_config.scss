@@ -20,3 +20,9 @@ $main-color-dark: #002a25;
     }
 }
 
+@mixin tablet-sm {
+    @media (max-width: 400px) {
+        @content;
+    }
+}
+
