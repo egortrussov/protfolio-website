@@ -9,6 +9,8 @@ export default class Projects extends Component {
 
     state = {
         type: 0, // 0 - web, 1 - images
+        projects: [],
+        isLoading: true
     }
 
     changeProjectsType(typeToSet) {
@@ -19,27 +21,48 @@ export default class Projects extends Component {
 
         this.setState({
             type: typeToSet
+        }, () => {
+            return this.loadProjects()
         })
     }
 
     static contextType = ProjectsContext;
 
     componentDidMount() {
-        console.log(this.context.getProjectById(1))
+        this.loadProjects();
+    }
+
+    loadProjects() {
+        const { type } = this.state;
+
+        let projects = this.context.getProjects(type);
+        console.log(projects)
+
+        this.setState({
+            isLoading: false,
+            projects
+        })
     }
     
 
     render() {
 
-        const { type } = this.state;
+        const { type, projects } = this.state;
 
         return (
-            <div>
+            <div className="page-container">
+                <div className="heading with-pb">
+                    <h1>
+                        <span>My</span> <span>Projects</span>
+                    </h1>
+                </div>
                 <SwitchProjectsTab 
                     changeProjectsType={ (type) => this.changeProjectsType(type) }
                     type={ type }
                 />
-                <ProjectsContainer />
+                <ProjectsContainer 
+                    projects={ projects }
+                />
             </div>
         )
     }

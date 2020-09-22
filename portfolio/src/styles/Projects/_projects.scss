@@ -1,0 +1,31 @@
+@import '../config';
+
+.switch-menu {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    .title {
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+
+    .btns-container {
+        margin-left: 3rem;
+
+        button {
+            padding: .9rem 1.6rem;
+            
+            span {
+                font-size: .8rem;
+            }
+
+            &.active {
+                
+                &::before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

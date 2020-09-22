@@ -3,6 +3,10 @@
   position: relative;
 }
 
+.heading.with-pb {
+  margin-bottom: 2rem;
+}
+
 .heading h1 {
   position: relative;
   z-index: 3;
@@ -33,7 +37,6 @@
 }
 
 .heading h1 span:hover {
-  color: #affef9;
   -webkit-animation-name: rubberBand;
           animation-name: rubberBand;
 }
@@ -77,6 +80,10 @@
   z-index: 8;
 }
 
+.btn:focus {
+  outline: none;
+}
+
 .btn::before {
   content: '';
   position: absolute;
@@ -92,6 +99,10 @@
 
 .btn:hover::before {
   width: 100%;
+}
+
+.page-container {
+  padding: 3rem 2rem;
 }
 
 @-webkit-keyframes rubberBand {
@@ -557,6 +568,37 @@
     -webkit-transform: translate(-50%, -50%) !important;
             transform: translate(-50%, -50%) !important;
   }
+}
+
+.switch-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3rem;
+}
+
+.switch-menu .title {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.switch-menu .btns-container {
+  margin-left: 3rem;
+}
+
+.switch-menu .btns-container button {
+  padding: .9rem 1.6rem;
+}
+
+.switch-menu .btns-container button span {
+  font-size: .8rem;
+}
+
+.switch-menu .btns-container button.active::before {
+  width: 100%;
 }
 
 * {

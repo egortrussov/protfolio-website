@@ -7,10 +7,16 @@ export default class SwitchProjectsTab extends Component {
 
         return (
             <div className="switch-menu">
-                Project type: 
+                <div className="title">
+                    Projects type:
+                </div>
                 <div className="btns-container">
-                    <button className={ !type ? 'active' : '' } onClick={ () => changeProjectsType(0) }>Web dev.</button>
-                    <button className={ type ? 'active' : '' } onClick={ () => changeProjectsType(1) }>images</button>
+                    <button className={ !type ? 'btn active' : 'btn' } onClick={ () => changeProjectsType(0) }>
+                        <span>web dev.</span>
+                    </button>
+                    <button className={ type ? 'btn active' : 'btn' } onClick={ () => changeProjectsType(1) }>
+                        <span>images</span>
+                    </button>
                 </div>
             </div>
         )
