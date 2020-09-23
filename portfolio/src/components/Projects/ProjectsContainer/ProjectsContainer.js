@@ -4,10 +4,18 @@ import ProjectCard from './ProjectCard'
 export default class ProjectsContainer extends Component {
 
     render() {
+
+        const { projects } = this.props;
+
         return (
-            <div>
-                Projects cont 
-                <ProjectCard />
+            <div className="projects-container">
+                {
+                    projects.map(project => {
+                        return (
+                            <ProjectCard project={ project } />
+                        )
+                    })
+                }
             </div>
         )
     }

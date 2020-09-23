@@ -626,6 +626,125 @@
   width: 100%;
 }
 
+.projects-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+.projects-container .project-card {
+  position: relative;
+  background-color: #00221e;
+  padding: 2rem 3rem;
+  width: 400px;
+  overflow: hidden;
+}
+
+.projects-container .project-card .clip-path {
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: .4s;
+  transition: .4s;
+  left: -50px;
+  top: -50px;
+}
+
+.projects-container .project-card:hover .clip-path {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  left: 0;
+  top: 0;
+}
+
+.projects-container .project-card .card-top {
+  position: relative;
+  width: 100%;
+  max-height: 300px;
+  min-height: 300px;
+  overflow: hidden;
+  z-index: 6;
+}
+
+.projects-container .project-card .card-top img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.projects-container .project-card .card-bottom {
+  position: relative;
+  z-index: 6;
+  margin-top: 1.5rem;
+}
+
+.projects-container .project-card .card-bottom .title {
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.projects-container .project-card .card-bottom .summary {
+  opacity: .7;
+  margin: .5rem 0;
+}
+
+.projects-container .project-card .card-bottom .stack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projects-container .project-card .card-bottom .btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.projects-container .project-card .card-bottom .btns a {
+  text-decoration: none !important;
+  color: #017a72;
+  font-size: 25px;
+  padding: .7rem 1.5rem;
+  border: 1px solid #017a72;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.projects-container .project-card .card-bottom .btns a:hover {
+  background-color: #fff;
+}
+
+.projects-container .project-card:hover .card-bottom {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  color: #002a25 !important;
+}
+
+.projects-container .project-card:hover .card-bottom .title {
+  color: #000;
+}
+
+.projects-container .project-card:hover .card-bottom .button:hover {
+  background-color: #017a72;
+  color: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
