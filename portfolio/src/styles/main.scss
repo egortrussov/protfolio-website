@@ -5,6 +5,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -16,4 +17,8 @@ body {
     font-family: $main-font-family;
     background-color: $main-color-dark;
     color: #fff;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }

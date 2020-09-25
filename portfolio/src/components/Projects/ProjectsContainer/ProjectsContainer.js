@@ -16,6 +16,20 @@ export default class ProjectsContainer extends Component {
                         )
                     })
                 }
+                {
+                    projects.map(project => {
+                        return (
+                            <ProjectCard project={ project } />
+                        )
+                    })
+                }
+                {
+                    projects.map(project => {
+                        return (
+                            <ProjectCard project={ project } />
+                        )
+                    })
+                }
             </div>
         )
     }

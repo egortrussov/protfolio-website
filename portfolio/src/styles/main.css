@@ -627,21 +627,54 @@
 }
 
 .projects-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  width: 100%;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 3rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+@media (max-width: 500px) {
+  .projects-container {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-grid-columns: initial !important;
+        grid-template-columns: initial !important;
+    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+  }
 }
 
 .projects-container .project-card {
+  width: 100%;
+  margin: auto;
   position: relative;
   background-color: #00221e;
   padding: 2rem 3rem;
-  width: 400px;
   overflow: hidden;
+  border-radius: 1rem;
+}
+
+@media (max-width: 500px) {
+  .projects-container .project-card {
+    position: relative;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .projects-container .project-card .clip-path {
@@ -672,6 +705,13 @@
   min-height: 300px;
   overflow: hidden;
   z-index: 6;
+}
+
+@media (max-width: 400px) {
+  .projects-container .project-card .card-top {
+    max-height: 180px;
+    min-height: 180px;
+  }
 }
 
 .projects-container .project-card .card-top img {
@@ -730,6 +770,14 @@
   background-color: #fff;
 }
 
+.projects-container .project-card:hover {
+  -webkit-transition: .2s;
+  transition: .2s;
+  -webkit-box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 3rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
 .projects-container .project-card:hover .card-bottom {
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -748,6 +796,8 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -759,5 +809,9 @@ body {
   font-family: "Nunito", sans-serif;
   background-color: #002a25;
   color: #fff;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */
