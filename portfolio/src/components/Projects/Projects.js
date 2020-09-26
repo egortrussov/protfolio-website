@@ -4,13 +4,16 @@ import ProjectsContainer from './ProjectsContainer/ProjectsContainer'
 import SwitchProjectsTab from './SwitchProjectsTab/SwitchProjectsTab'
 
 import { ProjectsContext } from '../../context/ProjectsContext';
+import ShowProjectOverlay from '../ShowProjectOverlay/ShowProjectOverlay';
 
 export default class Projects extends Component {
 
     state = {
         type: 0, // 0 - web, 1 - images
         projects: [],
-        isLoading: true
+        isLoading: true,
+        isProjectChosen: false,
+        currProject: null,
     }
 
     changeProjectsType(typeToSet) {
@@ -43,11 +46,21 @@ export default class Projects extends Component {
             projects
         })
     }
-    
+
+    chooseProjectToDisplay(id) {
+        const { projects } = this.state;
+
+        let project = projects.find(prj => prj.id === id);
+
+        this.setState({
+            isProjectChosen: true,
+            currProject: project
+        })
+    }    
 
     render() {
 
-        const { type, projects } = this.state;
+        const { type, projects, isProjectChosen, currProject } = this.state;
 
         return (
             <div className="page-container">
@@ -56,12 +69,21 @@ export default class Projects extends Component {
                         <span>My</span> <span>Projects</span>
                     </h1>
                 </div>
+                {
+                    isProjectChosen ? (
+                        <ShowProjectOverlay 
+                            project={ currProject }
+                        />
+                    ) : <></>
+                }
                 <SwitchProjectsTab 
                     changeProjectsType={ (type) => this.changeProjectsType(type) }
                     type={ type }
                 />
                 <ProjectsContainer 
                     projects={ projects }
+                    chooseProjectToDisplay={ (id) => this.chooseProjectToDisplay(id) }
+                    currProject
                 />
             </div>
         )

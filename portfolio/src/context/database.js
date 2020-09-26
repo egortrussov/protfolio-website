@@ -17,6 +17,7 @@ export const ProjectsData = [
                 image: 'express.png',
                 icon: null
             },
-        ]
+        ],
+        github: 'https://github.com/egortrussov'
     }
 ]
