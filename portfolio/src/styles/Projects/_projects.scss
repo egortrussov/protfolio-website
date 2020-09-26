@@ -193,3 +193,27 @@
         }
     }
 }
+
+.show-project-overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    min-height: 100vh !important;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 10;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-name: slide-overlay;
+    animation-timing-function: ease-in;
+}
+
+@keyframes slide-overlay {
+    0% {
+        top: -100%;
+    } 100% {
+        top: 0;
+    }
+}
