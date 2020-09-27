@@ -13,7 +13,7 @@ export default class Projects extends Component {
         projects: [],
         isLoading: true,
         isProjectChosen: false,
-        currProject: null,
+        currProjectId: null,
     }
 
     changeProjectsType(typeToSet) {
@@ -48,19 +48,32 @@ export default class Projects extends Component {
     }
 
     chooseProjectToDisplay(id) {
-        const { projects } = this.state;
+        // const { projects } = this.state;
 
-        let project = projects.find(prj => prj.id === id);
+        // let project = projects.find(prj => prj.id === id);
 
         this.setState({
             isProjectChosen: true,
-            currProject: project
+            currProjectId: id
         })
     }    
 
+    changeCurrentProjectId(value) {
+        let { currProjectId, projects } = this.state;
+
+        if (value < 0 && currProjectId == 0) return;
+        if (value > 0 && currProjectId == projects.length - 1) return;
+
+        currProjectId += value;
+
+        this.setState({
+            currProjectId
+        })
+    }
+
     render() {
 
-        const { type, projects, isProjectChosen, currProject } = this.state;
+        const { type, projects, isProjectChosen, currProjectId } = this.state;
 
         return (
             <div className="page-container">
@@ -72,7 +85,8 @@ export default class Projects extends Component {
                 {
                     isProjectChosen ? (
                         <ShowProjectOverlay 
-                            project={ currProject }
+                            project={ projects[currProjectId] }
+                            projectsNum={ projects.length }
                         />
                     ) : <></>
                 }

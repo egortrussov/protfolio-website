@@ -7,10 +7,10 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons'
 export default class ProjectCard extends Component {
     render() {
 
-        const { project } = this.props;
+        const { project, index } = this.props;
 
         return (
-            <div className="project-card" onClick={ () => this.props.chooseProjectToDisplay(project.id) }>
+            <div className="project-card" onClick={ () => this.props.chooseProjectToDisplay(index) }>
                 <div className="clip-path"></div>
                 <div className="card-top">
                     <img src="https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg" width="300" alt=""/>

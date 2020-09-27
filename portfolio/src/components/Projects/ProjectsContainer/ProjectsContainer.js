@@ -16,11 +16,12 @@ export default class ProjectsContainer extends Component {
         return (
             <div className="projects-container">
                 {
-                    projects.map(project => {
+                    projects.map((project, index) => {
                         return (
                             <ProjectCard 
                                 project={ project } 
                                 chooseProjectToDisplay={ (id) => this.props.chooseProjectToDisplay(id) }
+                                index={ index }
                             />
                         )
                     })
