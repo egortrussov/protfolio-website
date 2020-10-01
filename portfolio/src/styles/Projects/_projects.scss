@@ -282,6 +282,10 @@
                 }
             }
 
+            .stack {
+                margin: 1.5rem 0;;
+            }
+
             .btns {
                 display: flex;
                 width: 100%;
@@ -303,6 +307,18 @@
                 }
             }
         }
+    }
+}
+
+
+.project-stack {
+    display: flex;
+
+    .img {
+        display: block;
+        // width: 50px;
+        height: 40px;
+        margin-right: 1rem;
     }
 }
 

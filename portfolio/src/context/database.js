@@ -14,7 +14,7 @@ export const ProjectsData = [
             },
             {
                 name: 'express',
-                image: 'express.png',
+                image: 'nodejs.png',
                 icon: null
             },
         ],

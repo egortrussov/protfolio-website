@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import ProjectStack from '../ProjectStack/ProjectStack';
 
 export default class ProjectCard extends Component {
     render() {
@@ -23,7 +24,9 @@ export default class ProjectCard extends Component {
                         { project.summary }
                     </div>
                     <div className="stack">
-                        { project.stack[0].name }
+                        <ProjectStack 
+                            stack={ project.stack }
+                        />
                     </div>
                     <div className="btns">
                         <a href="" className="button">

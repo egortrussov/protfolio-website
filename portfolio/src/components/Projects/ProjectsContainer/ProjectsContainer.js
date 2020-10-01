@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
-import ShowProjectOverlay from '../../ShowProjectOverlay/ShowProjectOverlay';
+import ShowProjectOverlay from '../ShowProjectOverlay/ShowProjectOverlay';
 import ProjectCard from './ProjectCard'
 
 export default class ProjectsContainer extends Component {

@@ -2,8 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 import LandingPage from './components/LanfingPage/LandingPage'
-import Projects from './components/Projects/Projects'
-import ShowProjectOverlay from './components/ShowProjectOverlay/ShowProjectOverlay'
+import Projects from './components/Projects/Projects'   
 
 import './styles/main.css'
 import './styles/LandingPage/LandingPage.css'

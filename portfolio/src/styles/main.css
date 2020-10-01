@@ -899,6 +899,10 @@
   background-color: #00ccbe;
 }
 
+.show-project-overlay .container .description .stack {
+  margin: 1.5rem 0;
+}
+
 .show-project-overlay .container .description .btns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -920,6 +924,18 @@
 .show-project-overlay .container .description .btns a:hover {
   background-color: #017a72;
   color: #fff;
+}
+
+.project-stack {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.project-stack .img {
+  display: block;
+  height: 40px;
+  margin-right: 1rem;
 }
 
 @-webkit-keyframes slide-overlay {

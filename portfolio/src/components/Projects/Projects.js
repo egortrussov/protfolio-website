@@ -4,7 +4,7 @@ import ProjectsContainer from './ProjectsContainer/ProjectsContainer'
 import SwitchProjectsTab from './SwitchProjectsTab/SwitchProjectsTab'
 
 import { ProjectsContext } from '../../context/ProjectsContext';
-import ShowProjectOverlay from '../ShowProjectOverlay/ShowProjectOverlay';
+import ShowProjectOverlay from './ShowProjectOverlay/ShowProjectOverlay';
 
 export default class Projects extends Component {
 
