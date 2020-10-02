@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft, faArrowRight, faEye } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import ProjectStack from '../ProjectStack/ProjectStack';
 
@@ -15,6 +15,18 @@ export default class ShowProjectOverlay extends Component {
                 <div className="container">
                     <div className="image">
                         <img src="https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg" alt=""/>
+                        <div className="move-btns">
+                            <div className="move-btn">
+                                <FontAwesomeIcon 
+                                    icon={ faArrowLeft }
+                                />
+                            </div>
+                            <div className="move-btn">
+                                <FontAwesomeIcon 
+                                    icon={ faArrowRight }
+                                />
+                            </div>
+                        </div>
                     </div> 
                     <div className="info">
                         <div className="description">
@@ -23,11 +35,6 @@ export default class ShowProjectOverlay extends Component {
                             </div>
                             <div className="summary">
                                 { project.summary }
-                            </div>
-                            <div className="stack">
-                                <ProjectStack 
-                                    stack={ project.stack }
-                                />
                             </div>
                             <div className="btns">
                                 <a href="" className="button">
@@ -41,7 +48,15 @@ export default class ShowProjectOverlay extends Component {
                                     ) : <></>
                                 }
                             </div>
+                            <div className="stack">
+                                <ProjectStack 
+                                    stack={ project.stack }
+                                    hasLabel={ true }
+                                />
+                            </div>
                         </div>
+
+                        .
                     </div>
                 </div>
             </div>

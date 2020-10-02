@@ -826,7 +826,7 @@
 }
 
 .show-project-overlay .container .image {
-  width: auto;
+  width: 100%;
   padding: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -837,12 +837,51 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 .show-project-overlay .container .image img {
   width: auto;
   max-width: 100%;
   max-height: 100%;
+}
+
+.show-project-overlay .container .image .move-btns {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.show-project-overlay .container .image .move-btns .move-btn {
+  height: 100%;
+  width: 60px;
+  background-color: rgba(1, 122, 114, 0.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: rgba(255, 255, 255, 0.3);
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.show-project-overlay .container .image .move-btns .move-btn:hover {
+  background-color: rgba(1, 122, 114, 0.4);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .show-project-overlay .container .description {
@@ -915,10 +954,21 @@
   text-decoration: none !important;
   color: #017a72;
   font-size: 25px;
-  padding: .7rem 1.5rem;
+  padding-top: .7rem;
+  padding-bottom: .7rem;
   border: 1px solid #017a72;
   -webkit-transition: .2s;
   transition: .2s;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .show-project-overlay .container .description .btns a:hover {
@@ -926,13 +976,19 @@
   color: #fff;
 }
 
-.project-stack {
+.project-stack .label {
+  margin-bottom: .5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.project-stack .img-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.project-stack .img {
+.project-stack .img-container .img {
   display: block;
   height: 40px;
   margin-right: 1rem;
