@@ -275,9 +275,53 @@
             }
 
             @include tablet-lg-md {
+                position: absolute;
+                top: auto;
+                bottom: 0;
                 width: 100% !important;
-                height: 150px !important;
-                min-height: 150px !important
+                padding-top: 1rem;
+                transition: height .2s;
+
+                &.hidden {
+                    height: 50px !important;
+                    min-height: 50px !important;
+                }
+
+                &.shown {
+                    height: 70vh !important
+                }
+            }
+
+            .toggle-block {
+
+                @include tablet-lg-md {
+                    display: block;
+                }
+
+                display: none;
+                position: absolute;
+                top: 15px;
+                left: auto;
+                right: 20px;
+                width: 40px;
+                height: 40px;
+                background-color: #fafafa;
+                border: 1px solid #dfdfdf;
+                box-shadow: 0 0 10px rgba(#000, .2);
+                border-radius: 50%;
+
+                .icon {
+                    font-size: 1rem;
+                    transition: .5s;
+
+                    &.hidden {
+                        transform: rotate(0);
+                    }
+
+                    &.shown {
+                        transform: rotate(540deg);
+                    }
+                }
             }
 
             min-width: 350px;
@@ -292,6 +336,14 @@
             
 
             .title {
+                @include tablet-lg-md {
+                    font-size: 1.7rem;
+                }
+
+                @include tablet-sm {
+                    font-size: 1.4rem;
+                }
+
                 font-size: 1.9rem;
                 font-weight: 800;
                 position: relative;

@@ -1,12 +1,28 @@
 import React, { Component } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowRight, faEye } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft, faArrowRight, faArrowUp, faEye } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import ProjectStack from '../ProjectStack/ProjectStack';
 
 export default class ShowProjectOverlay extends Component {
+
+    state = {
+        isShown: false
+    }
+
+    toggleInfoBlock() {
+        let { isShown } = this.state;
+        console.log(isShown)
+
+        this.setState({
+            isShown: !isShown
+        })
+    }
+
     render() {
+
+        const { isShown } = this.state;
 
         const { project, projectsNum } = this.props;
 
@@ -28,8 +44,14 @@ export default class ShowProjectOverlay extends Component {
                             </div>
                         </div>
                     </div> 
-                    <div className="info">
-                        <div className="description">
+                    <div className={ `info ${ isShown ? 'shown' : 'hidden' }` }>
+                        <div className="description" onClick={ () => this.toggleInfoBlock() }>
+                            <button className={ `toggle-block ${ isShown ? 'shown' : 'hidden' }` }>
+                                <FontAwesomeIcon 
+                                    className={ `icon ${ isShown ? 'shown' : 'hidden' }`}
+                                    icon={ faArrowUp }
+                                />
+                            </button>
                             <div className="title">
                                 { project.title }
                             </div>

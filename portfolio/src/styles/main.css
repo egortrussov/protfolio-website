@@ -921,16 +921,76 @@
 
 @media (max-width: 700px) {
   .show-project-overlay .container .info {
+    position: absolute;
+    top: auto;
+    bottom: 0;
     width: 100% !important;
-    height: 150px !important;
-    min-height: 150px !important;
+    padding-top: 1rem;
+    -webkit-transition: height .2s;
+    transition: height .2s;
   }
+  .show-project-overlay .container .info.hidden {
+    height: 50px !important;
+    min-height: 50px !important;
+  }
+  .show-project-overlay .container .info.shown {
+    height: 70vh !important;
+  }
+}
+
+.show-project-overlay .container .info .toggle-block {
+  display: none;
+  position: absolute;
+  top: 15px;
+  left: auto;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #fafafa;
+  border: 1px solid #dfdfdf;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+
+@media (max-width: 700px) {
+  .show-project-overlay .container .info .toggle-block {
+    display: block;
+  }
+}
+
+.show-project-overlay .container .info .toggle-block .icon {
+  font-size: 1rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.show-project-overlay .container .info .toggle-block .icon.hidden {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.show-project-overlay .container .info .toggle-block .icon.shown {
+  -webkit-transform: rotate(540deg);
+          transform: rotate(540deg);
 }
 
 .show-project-overlay .container .description .title {
   font-size: 1.9rem;
   font-weight: 800;
   position: relative;
+}
+
+@media (max-width: 700px) {
+  .show-project-overlay .container .description .title {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .show-project-overlay .container .description .title {
+    font-size: 1.4rem;
+  }
 }
 
 .show-project-overlay .container .description .title::after {
