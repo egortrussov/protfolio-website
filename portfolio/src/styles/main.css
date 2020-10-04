@@ -802,8 +802,11 @@
   left: 0;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 10;
-  -webkit-animation-duration: .5s;
-          animation-duration: .5s;
+}
+
+.show-project-overlay.animated.show {
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-iteration-count: 1;
@@ -863,6 +866,21 @@
   width: auto;
   max-width: 100%;
   max-height: 100%;
+  opacity: 0;
+}
+
+.show-project-overlay .container .image.animated.show img {
+  opacity: 0;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards !important;
+          animation-fill-mode: forwards !important;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-name: show-overlay-elements;
+          animation-name: show-overlay-elements;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
 }
 
 .show-project-overlay .container .image .move-btns {
@@ -993,6 +1011,26 @@
           transform: rotate(540deg);
 }
 
+.show-project-overlay .container .description {
+  opacity: 0;
+}
+
+.show-project-overlay .container .description.animated.show {
+  -webkit-animation-delay: .2s;
+          animation-delay: .2s;
+  opacity: 0;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards !important;
+          animation-fill-mode: forwards !important;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-name: show-overlay-elements;
+          animation-name: show-overlay-elements;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+
 .show-project-overlay .container .description .title {
   font-size: 1.9rem;
   font-weight: 800;
@@ -1121,6 +1159,32 @@
   }
   100% {
     top: 0;
+  }
+}
+
+@-webkit-keyframes show-overlay-elements {
+  0% {
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes show-overlay-elements {
+  0% {
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
   }
 }
 

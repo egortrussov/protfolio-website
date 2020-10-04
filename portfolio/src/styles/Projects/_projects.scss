@@ -203,11 +203,17 @@
     left: 0;
     background-color: rgba(0, 0, 0, .6);
     z-index: 10;
-    animation-duration: .5s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-name: slide-overlay;
-    animation-timing-function: ease-in;
+    
+    &.animated {
+
+        &.show {
+            animation-duration: $project-overlay-animation-duration;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            animation-name: slide-overlay;
+            animation-timing-function: ease-in;
+        }
+    }
 
     .container {
         @include tablet-lg-md {
@@ -232,12 +238,39 @@
             align-items: center;
             justify-content: center;
             position: relative;
-
+            // opacity: 0;
             img {
                 width: auto;
                 max-width: 100%;
                 max-height: 100%;
+                opacity: 0;
             }
+
+            &.animated {
+                
+                
+                &.show {
+                    // background-color: #fff;
+
+                    img {
+                        opacity: 0;
+                        animation-duration: $project-overlay-animation-duration;
+                        animation-fill-mode: forwards !important;
+                        animation-iteration-count: 1;
+                        animation-name: show-overlay-elements;
+                        animation-timing-function: ease-in;
+                    }
+                    
+                }
+            }
+
+            // &.displayed {
+                
+            //     img {
+            //         opacity: 1;
+            //     }
+            // }
+
 
             .move-btns {
                 position: absolute;
@@ -350,6 +383,26 @@
         }
 
         .description {
+            opacity: 0;
+
+            &.animated {
+                
+                
+                &.show {
+                    // background-color: #fff;
+
+                    // img {
+                    animation-delay: .2s;
+                    opacity: 0;
+                    animation-duration: $project-overlay-animation-duration;
+                    animation-fill-mode: forwards !important;
+                    animation-iteration-count: 1;
+                    animation-name: show-overlay-elements;
+                    animation-timing-function: ease-in;
+                    // }
+                    
+                }
+            }
             
 
             .title {
@@ -464,5 +517,15 @@
         top: -100%;
     } 100% {
         top: 0;
+    }
+}
+
+@keyframes show-overlay-elements {
+    0% {
+        transform: translateY(-70px);
+        opacity: 0;
+    } 100% {
+        transform: translateY(0px);
+        opacity: 1;
     }
 }
