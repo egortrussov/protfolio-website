@@ -903,6 +903,24 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
+.show-project-overlay .container .image .close-btn {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  top: 20px;
+  left: auto;
+  right: 80px;
+  -webkit-transition: .2s;
+  transition: .2s;
+  font-size: 1.7rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.show-project-overlay .container .image .close-btn:hover {
+  color: #fff;
+}
+
 .show-project-overlay .container .info {
   min-width: 350px;
   width: 350px;

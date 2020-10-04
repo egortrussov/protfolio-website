@@ -266,6 +266,23 @@
                     }
                 }
             }
+
+            .close-btn {
+                position: absolute;
+                color: rgba(#fff, .5);
+                top: 20px;
+                left: auto;
+                right: 80px;
+                transition: .2s;
+                font-size: 1.7rem;
+                background: none;
+                border: none;
+                cursor: pointer;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
         }
 
         .info {

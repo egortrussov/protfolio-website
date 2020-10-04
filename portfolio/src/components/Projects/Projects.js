@@ -71,6 +71,12 @@ export default class Projects extends Component {
         })
     }
 
+    closeProjectOverlay() {
+        this.setState({
+            isProjectChosen: false
+        })
+    }
+
     render() {
 
         const { type, projects, isProjectChosen, currProjectId } = this.state;
@@ -87,6 +93,7 @@ export default class Projects extends Component {
                         <ShowProjectOverlay 
                             project={ projects[currProjectId] }
                             projectsNum={ projects.length }
+                            closeProjectOverlay={ () => this.closeProjectOverlay() }
                         />
                     ) : <></>
                 }

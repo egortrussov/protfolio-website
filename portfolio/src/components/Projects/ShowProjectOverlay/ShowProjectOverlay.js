@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowRight, faArrowUp, faEye } from '@fortawesome/free-solid-svg-icons'
+import { faArrowLeft, faArrowRight, faArrowUp, faEye, faTimes } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import ProjectStack from '../ProjectStack/ProjectStack';
 
@@ -43,6 +43,12 @@ export default class ShowProjectOverlay extends Component {
                                 />
                             </div>
                         </div>
+                        <button className="close-btn" onClick={ () => this.props.closeProjectOverlay() }>
+                            <FontAwesomeIcon 
+                                className="icon"
+                                icon={ faTimes }
+                            />
+                        </button>
                     </div> 
                     <div className={ `info ${ isShown ? 'shown' : 'hidden' }` }>
                         <div className="description" onClick={ () => this.toggleInfoBlock() }>
