@@ -19,5 +19,21 @@ export const ProjectsData = [
             },
         ],
         github: 'https://github.com/egortrussov'
+    },
+    {
+        id: 2,
+        type: 0,
+        title: 'Project 2',
+        summary: 'A cool project',
+        link: 'https://google.com',
+        image: 'project1.png',
+        stack: [
+            {
+                name: 'ReactJS',
+                image: 'react.png',
+                icon: 'fas fa-react'
+            }
+        ],
+        github: 'https://github.com/egortrussov'
     }
 ]

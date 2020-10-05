@@ -893,6 +893,20 @@
           animation-timing-function: ease-in;
 }
 
+.show-project-overlay .container .image.animated.hide img {
+  opacity: 1;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards !important;
+          animation-fill-mode: forwards !important;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-name: hide-overlay-elements;
+          animation-name: hide-overlay-elements;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+
 .show-project-overlay .container .image .move-btns {
   position: absolute;
   display: -webkit-box;
@@ -1037,6 +1051,22 @@
           animation-iteration-count: 1;
   -webkit-animation-name: show-overlay-elements;
           animation-name: show-overlay-elements;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+}
+
+.show-project-overlay .container .description.animated.hide {
+  -webkit-animation-delay: .0s;
+          animation-delay: .0s;
+  opacity: 1;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards !important;
+          animation-fill-mode: forwards !important;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-name: hide-overlay-elements;
+          animation-name: hide-overlay-elements;
   -webkit-animation-timing-function: ease-in;
           animation-timing-function: ease-in;
 }
@@ -1213,6 +1243,32 @@
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes hide-overlay-elements {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+    opacity: 0;
+  }
+}
+
+@keyframes hide-overlay-elements {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+    opacity: 0;
   }
 }
 

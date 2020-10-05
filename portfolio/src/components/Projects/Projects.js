@@ -60,11 +60,13 @@ export default class Projects extends Component {
 
     changeCurrentProjectId(value) {
         let { currProjectId, projects } = this.state;
+        console.log(projects.length, currProjectId)
 
         if (value < 0 && currProjectId == 0) return;
         if (value > 0 && currProjectId == projects.length - 1) return;
 
         currProjectId += value;
+        console.log(value)
 
         this.setState({
             currProjectId
@@ -94,6 +96,7 @@ export default class Projects extends Component {
                             project={ projects[currProjectId] }
                             projectsNum={ projects.length }
                             closeProjectOverlay={ () => this.closeProjectOverlay() }
+                            changeCurrentProjectId={ (val) => this.changeCurrentProjectId(val) }
                         />
                     ) : <></>
                 }

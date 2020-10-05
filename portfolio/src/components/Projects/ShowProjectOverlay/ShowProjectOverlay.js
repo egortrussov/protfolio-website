@@ -65,6 +65,27 @@ export default class ShowProjectOverlay extends Component {
         }, 500)
     }
 
+    changeProject(val) {
+        let imageEl = this.imageEl.current;
+        let descriptionEl = this.descriptionEl.current;
+
+        imageEl.classList.remove('show');
+        imageEl.classList.add('hide');
+        descriptionEl.classList.remove('show');
+        descriptionEl.classList.add('hide');
+
+        window.setTimeout(() => {
+            this.props.changeCurrentProjectId(val);
+
+            imageEl.classList.remove('hide');
+            imageEl.classList.add('show');
+
+            descriptionEl.classList.remove('hide');
+            descriptionEl.classList.add('show');
+        }, 500)
+        
+    }
+
     render() {
 
         const { isShown } = this.state;
@@ -75,14 +96,18 @@ export default class ShowProjectOverlay extends Component {
             <div ref={ this.mainBlockEl } className="show-project-overlay">
                 <div className="container">
                     <div ref={ this.imageEl } className="image">
-                        <img src="https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg" alt=""/>
+                        {
+                            project.id === 1 ? <img src="https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg" alt=""/> :
+                            <img src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg" alt=""/>
+                        }
+                        
                         <div className="move-btns">
-                            <div className="move-btn">
+                            <div className="move-btn" onClick={ () => this.changeProject(-1) }>
                                 <FontAwesomeIcon 
                                     icon={ faArrowLeft }
                                 />
                             </div>
-                            <div className="move-btn">
+                            <div className="move-btn"  onClick={ () => this.changeProject(1) }>
                                 <FontAwesomeIcon 
                                     icon={ faArrowRight }
                                 />

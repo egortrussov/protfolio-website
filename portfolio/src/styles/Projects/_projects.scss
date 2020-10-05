@@ -273,6 +273,18 @@
                     }
                     
                 }
+
+                &.hide {
+
+                    img {
+                        opacity: 1;
+                        animation-duration: $project-overlay-animation-duration;
+                        animation-fill-mode: forwards !important;
+                        animation-iteration-count: 1;
+                        animation-name: hide-overlay-elements;
+                        animation-timing-function: ease-in;
+                    }
+                }
             }
 
             // &.displayed {
@@ -413,6 +425,16 @@
                     // }
                     
                 }
+
+                &.hide {
+                    animation-delay: .0s;
+                    opacity: 1;
+                    animation-duration: $project-overlay-animation-duration;
+                    animation-fill-mode: forwards !important;
+                    animation-iteration-count: 1;
+                    animation-name: hide-overlay-elements;
+                    animation-timing-function: ease-in;
+                }
             }
             
 
@@ -549,5 +571,16 @@
     } 100% {
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+
+@keyframes hide-overlay-elements {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    } 100% {
+        
+        transform: translateY(-70px);
+        opacity: 0;
     }
 }
