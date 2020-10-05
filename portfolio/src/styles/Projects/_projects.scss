@@ -203,15 +203,26 @@
     left: 0;
     background-color: rgba(0, 0, 0, .6);
     z-index: 10;
+    opacity: 0;
+    transition: $project-overlay-animation-duration;
     
     &.animated {
-
+        animation-duration: $project-overlay-animation-duration;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        transition: all $project-overlay-animation-duration;
+        animation-name: slide-overlay;
+        
         &.show {
-            animation-duration: $project-overlay-animation-duration;
-            animation-fill-mode: forwards;
-            animation-iteration-count: 1;
-            animation-name: slide-overlay;
-            animation-timing-function: ease-in;
+            
+        }
+
+        &.hide {
+            // background-color: #fff;
+            // animation-direction: reverse;
+            animation-name: slide-overlay-hide;
+            // opacity: 0 !important;
         }
     }
 
@@ -514,9 +525,20 @@
 
 @keyframes slide-overlay {
     0% {
-        top: -100%;
+        // top: -100%;0
+        opacity: 0;
     } 100% {
-        top: 0;
+        // top: 0;
+        opacity: 1
+    }
+}
+@keyframes slide-overlay-hide {
+    0% {
+        // top: -100%;0
+        opacity: 1;
+    } 100% {
+        // top: 0;
+        opacity: 0
     }
 }
 

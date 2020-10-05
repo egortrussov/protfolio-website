@@ -53,6 +53,18 @@ export default class ShowProjectOverlay extends Component {
         })
     }
 
+    closeOverlay() {
+        let mainBlockEl = this.mainBlockEl.current;
+
+        // mainBlockEl.classList.remove('show');
+        mainBlockEl.classList.add('hide');
+
+        window.setTimeout(() => {
+            console.log('object')
+            this.props.closeProjectOverlay();
+        }, 500)
+    }
+
     render() {
 
         const { isShown } = this.state;
@@ -76,7 +88,7 @@ export default class ShowProjectOverlay extends Component {
                                 />
                             </div>
                         </div>
-                        <button className="close-btn" onClick={ () => this.props.closeProjectOverlay() }>
+                        <button className="close-btn" onClick={ () => this.closeOverlay() }>
                             <FontAwesomeIcon 
                                 className="icon"
                                 icon={ faTimes }
