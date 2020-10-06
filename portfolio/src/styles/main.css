@@ -988,20 +988,28 @@
     padding-top: 1rem;
     -webkit-transition: height .2s;
     transition: height .2s;
+    padding-bottom: 1rem;
   }
   .show-project-overlay .container .info.hidden {
-    height: 50px !important;
-    min-height: 50px !important;
+    height: auto;
+  }
+  .show-project-overlay .container .info.hidden .text {
+    display: none;
   }
   .show-project-overlay .container .info.shown {
     height: 70vh !important;
+  }
+  .show-project-overlay .container .info.shown .text {
+    display: block;
   }
 }
 
 .show-project-overlay .container .info .toggle-block {
   display: none;
   position: absolute;
-  top: 15px;
+  top: -1rem !important;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   left: auto;
   right: 20px;
   width: 40px;
@@ -1017,6 +1025,10 @@
   .show-project-overlay .container .info .toggle-block {
     display: block;
   }
+}
+
+.show-project-overlay .container .info .toggle-block:focus {
+  outline: none;
 }
 
 .show-project-overlay .container .info .toggle-block .icon {

@@ -2,10 +2,10 @@ export const ProjectsData = [
     {
         id: 1,
         type: 0,
-        title: 'Project 1',
+        title: 'Terrain generation visualiser',
         summary: 'A great project',
         link: 'https://google.com',
-        image: 'project1.png',
+        image: 'project1.jpg',
         stack: [
             {
                 name: 'ReactJS',
@@ -26,7 +26,7 @@ export const ProjectsData = [
         title: 'Project 2',
         summary: 'A cool project',
         link: 'https://google.com',
-        image: 'project1.png',
+        image: 'project1.jpg',
         stack: [
             {
                 name: 'ReactJS',

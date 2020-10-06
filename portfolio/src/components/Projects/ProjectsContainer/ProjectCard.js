@@ -14,7 +14,8 @@ export default class ProjectCard extends Component {
             <div className="project-card" onClick={ () => this.props.chooseProjectToDisplay(index) }>
                 <div className="clip-path"></div>
                 <div className="card-top">
-                    <img src="https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg" width="300" alt=""/>
+                    <img src={ require(`../../../images/projects/${ project.image }`) } alt=""/>
+                    {/* <img src="https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg" width="300" alt=""/> */}
                 </div>
                 <div className="card-bottom">
                     <div className="title">

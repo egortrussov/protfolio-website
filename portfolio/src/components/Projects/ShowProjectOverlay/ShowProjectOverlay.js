@@ -96,10 +96,7 @@ export default class ShowProjectOverlay extends Component {
             <div ref={ this.mainBlockEl } className="show-project-overlay">
                 <div className="container">
                     <div ref={ this.imageEl } className="image">
-                        {
-                            project.id === 1 ? <img src="https://cdn.jpegmini.com/user/images/slider_puffin_jpegmini_mobile.jpg" alt=""/> :
-                            <img src="https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg" alt=""/>
-                        }
+                        <img src={ require(`../../../images/projects/${ project.image }`) } alt=""/>
                         
                         <div className="move-btns">
                             <div className="move-btn" onClick={ () => this.changeProject(-1) }>
@@ -131,30 +128,32 @@ export default class ShowProjectOverlay extends Component {
                             <div className="title">
                                 { project.title }
                             </div>
-                            <div className="summary">
-                                { project.summary }
+                            <div className="text">
+                                <div className="summary">
+                                    { project.summary }
+                                </div>
+                                <div className="btns">
+                                    <a href="" className="button">
+                                        <FontAwesomeIcon icon={ faEye } />
+                                    </a>
+                                    {
+                                        project.type === 0 && project.github ? (
+                                            <a href={ project.github } className="button" target="_blank">
+                                                <FontAwesomeIcon  icon={ faGithub } />
+                                            </a>
+                                        ) : <></>
+                                    }
+                                </div>
+                                <div className="stack">
+                                    <ProjectStack 
+                                        stack={ project.stack }
+                                        hasLabel={ true }
+                                    />
+                                </div>
                             </div>
-                            <div className="btns">
-                                <a href="" className="button">
-                                    <FontAwesomeIcon icon={ faEye } />
-                                </a>
-                                {
-                                    project.type === 0 && project.github ? (
-                                        <a href={ project.github } className="button" target="_blank">
-                                            <FontAwesomeIcon  icon={ faGithub } />
-                                        </a>
-                                    ) : <></>
-                                }
                             </div>
-                            <div className="stack">
-                                <ProjectStack 
-                                    stack={ project.stack }
-                                    hasLabel={ true }
-                                />
-                            </div>
-                        </div>
 
-                        .
+                        
                     </div>
                 </div>
             </div>

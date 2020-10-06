@@ -354,14 +354,23 @@
                 width: 100% !important;
                 padding-top: 1rem;
                 transition: height .2s;
+                padding-bottom: 1rem;
 
                 &.hidden {
-                    height: 50px !important;
-                    min-height: 50px !important;
+                    height: auto ;
+                    // min-height: 50px !important;
+
+                    .text {
+                        display: none;
+                    }
                 }
 
                 &.shown {
-                    height: 70vh !important
+                    height: 70vh !important;
+                    
+                    .text {
+                        display: block;
+                    }
                 }
             }
 
@@ -373,7 +382,8 @@
 
                 display: none;
                 position: absolute;
-                top: 15px;
+                top: -1rem !important;
+                transform: translateY(-50%);
                 left: auto;
                 right: 20px;
                 width: 40px;
@@ -382,6 +392,10 @@
                 border: 1px solid #dfdfdf;
                 box-shadow: 0 0 10px rgba(#000, .2);
                 border-radius: 50%;
+
+                &:focus {
+                    outline: none;
+                }
 
                 .icon {
                     font-size: 1rem;
