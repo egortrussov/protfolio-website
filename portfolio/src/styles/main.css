@@ -524,6 +524,12 @@
   max-width: 700px;
 }
 
+@media (min-width: 1250px) {
+  .about .container {
+    max-width: 60vw;
+  }
+}
+
 .about .container .left {
   width: auto;
   position: absolute;
@@ -531,9 +537,19 @@
   left: 0;
 }
 
+.about .container .left .heading h1 {
+  font-size: 4vw !important;
+}
+
+@media (min-width: 1250px) {
+  .about .container .left .heading h1 {
+    font-size: 3vw !important;
+  }
+}
+
 .about .container .right {
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 3vw;
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 1.5;
@@ -549,6 +565,12 @@
 @media (max-width: 500px) {
   .about .container .right {
     font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1250px) {
+  .about .container .right {
+    font-size: 2vw;
   }
 }
 

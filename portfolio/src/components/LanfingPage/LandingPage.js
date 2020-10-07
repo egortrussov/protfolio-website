@@ -1,5 +1,6 @@
 import React, { Component, createRef } from 'react'
 import About from './About/About';
+import Contact from './Contact/Contact';
 
 import Hero from './Hero/Hero'
 
@@ -7,7 +8,7 @@ export default class LandingPage extends Component {
 
     state = {
         currentPage: 0,
-        pageNum: 2,
+        pageNum: 3,
         isAnimated: false,
         animProperties: {
             hide: null,
@@ -60,10 +61,13 @@ export default class LandingPage extends Component {
                 })
             }, 1500)
 
+            console.log(extraClasses)
+
             this.setState({
                 isAnimated: true,
                 currentPage,
-                animProperties
+                animProperties,
+                extraClasses
             })
             
         })
@@ -82,6 +86,7 @@ export default class LandingPage extends Component {
                     
                     <About extraClass={ extraClasses[1] } />
 
+                    <Contact extraClass={ extraClasses[2] } />
                 </div>
             </div>
         )

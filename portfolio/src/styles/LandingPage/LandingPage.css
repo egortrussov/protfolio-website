@@ -524,6 +524,12 @@
   max-width: 700px;
 }
 
+@media (min-width: 1250px) {
+  .about .container {
+    max-width: 60vw;
+  }
+}
+
 .about .container .left {
   width: auto;
   position: absolute;
@@ -531,9 +537,31 @@
   left: 0;
 }
 
+.about .container .left .heading h1 {
+  font-size: 4vw;
+}
+
+@media (min-width: 1250px) {
+  .about .container .left .heading h1 {
+    font-size: 3.5vw;
+  }
+}
+
+@media (max-width: 750px) {
+  .about .container .left .heading h1 {
+    font-size: 2.6rem !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .about .container .left .heading h1 {
+    font-size: 2.6rem !important;
+  }
+}
+
 .about .container .right {
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 3vw;
   font-weight: 700;
   letter-spacing: 1px;
   line-height: 1.5;
@@ -552,12 +580,64 @@
   }
 }
 
+@media (min-width: 1250px) {
+  .about .container .right {
+    font-size: 2vw;
+  }
+}
+
 .about .container .btn-box {
   position: absolute;
   bottom: 0;
   top: auto;
   left: auto;
   right: 0;
+}
+
+.contact {
+  height: 105vh;
+  width: 100%;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact.hidden {
+  position: absolute;
+}
+
+.contact.hidden.down {
+  bottom: -105vh;
+  top: auto;
+}
+
+.contact.hidden.up {
+  top: -105vh;
+  bottom: auto;
+}
+
+.contact.shown {
+  bottom: 0;
+  top: 0;
+}
+
+.contact.shown .container {
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-name: fade;
+          animation-name: fade;
 }
 
 @-webkit-keyframes fade {
