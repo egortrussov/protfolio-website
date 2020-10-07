@@ -111,6 +111,42 @@
   }
 }
 
+.back-link {
+  display: block;
+  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  display: inline-block;
+  margin-right: 13px;
+}
+
+.back-link:hover {
+  -webkit-animation-name: rubberBand;
+          animation-name: rubberBand;
+}
+
+.back-link .icon {
+  font-size: 1.6rem;
+  margin-right: .5rem;
+}
+
+.back-link span {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
 @-webkit-keyframes rubberBand {
   from {
     -webkit-transform: scale3d(1, 1, 1);
@@ -989,6 +1025,7 @@
     -webkit-transition: height .2s;
     transition: height .2s;
     padding-bottom: 1rem;
+    min-width: initial;
   }
   .show-project-overlay .container .info.hidden {
     height: auto;

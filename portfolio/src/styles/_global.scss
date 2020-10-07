@@ -109,6 +109,36 @@
   padding: 3rem 2rem
 }
 
+.back-link {
+  display: block;
+  padding-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: 1;
+  display: inline-block;
+  margin-right: 13px;
+
+  &:hover {
+      // color: lighten($main-color, $amount: 60);
+      animation-name: rubberBand;
+  }
+
+  .icon {
+    font-size: 1.6rem;
+    margin-right: .5rem;
+  }
+
+  span {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+}
+
 
 @keyframes rubberBand {
     from {

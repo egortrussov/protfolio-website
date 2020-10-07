@@ -5,6 +5,7 @@ import SwitchProjectsTab from './SwitchProjectsTab/SwitchProjectsTab'
 
 import { ProjectsContext } from '../../context/ProjectsContext';
 import ShowProjectOverlay from './ShowProjectOverlay/ShowProjectOverlay';
+import BackLink from '../GlobalComponents/BackLink/BackLink';
 
 export default class Projects extends Component {
 
@@ -85,6 +86,10 @@ export default class Projects extends Component {
 
         return (
             <div className="page-container">
+                <BackLink  
+                    link="/"
+                />
+
                 <div className="heading with-pb">
                     <h1>
                         <span>My</span> <span>Projects</span>
