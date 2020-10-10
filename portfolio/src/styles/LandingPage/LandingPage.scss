@@ -374,6 +374,44 @@
 
     display: flex;
     align-items: center;
+
+    .container {
+        padding-left: 2rem;
+
+        .middle {
+            margin-top: .5rem;
+
+            .text {
+                font-weight: bold;
+                font-size: 1.7rem;
+            }
+
+            .list-container {
+                margin: 1rem 0;
+                margin-bottom: 1.2rem;
+
+                .option {
+                    position: relative;
+                    display: block;
+                    padding-left: 2.5rem;
+                    margin: .5rem 0;
+                    font-size: 1.3rem;
+                    font-weight: 500;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 5px;
+                        left: 10px;
+                        height: 7px;
+                        width: 18px;
+                        // transform: translateY(-50%);
+                        background-color: $main-color;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @keyframes fade {

@@ -640,6 +640,43 @@
           animation-name: fade;
 }
 
+.contact .container {
+  padding-left: 2rem;
+}
+
+.contact .container .middle {
+  margin-top: .5rem;
+}
+
+.contact .container .middle .text {
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.contact .container .middle .list-container {
+  margin: 1rem 0;
+  margin-bottom: 1.2rem;
+}
+
+.contact .container .middle .list-container .option {
+  position: relative;
+  display: block;
+  padding-left: 2.5rem;
+  margin: .5rem 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.contact .container .middle .list-container .option::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  height: 7px;
+  width: 18px;
+  background-color: #017a72;
+}
+
 @-webkit-keyframes fade {
   0% {
     opacity: 0;
