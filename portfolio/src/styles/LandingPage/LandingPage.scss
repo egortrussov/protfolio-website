@@ -411,6 +411,36 @@
                 }
             }
         }
+
+        .links {
+            margin-top: 1rem;
+
+            .mail-link {
+                display: flex;
+                align-items: center;
+
+                .icon {
+                    font-size: 1.5rem;
+                    color: $main-color-light;
+                }
+
+                span {
+                    margin-left: 1rem;
+                    opacity: .6;
+                }
+            }
+
+            .icons-container {
+                margin-top: 1rem;
+
+                .icon {
+                    color: $main-color-light;
+                    text-decoration: none;
+                    font-size: 1.7rem;
+                    margin-right: 1rem;
+                }
+            }
+        }
     }
 }
 
