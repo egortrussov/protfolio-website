@@ -7,14 +7,14 @@ import Hero from './Hero/Hero'
 export default class LandingPage extends Component {  
 
     state = {
-        currentPage: 2,
+        currentPage: 0,
         pageNum: 3,
         isAnimated: false,
         animProperties: {
             hide: null,
             show: null
         },
-        extraClasses: ['hidden down', 'hidden down', 'shown']
+        extraClasses: ['shown', 'hidden down', 'hidden down',]
     }
 
     componentDidMount() {
