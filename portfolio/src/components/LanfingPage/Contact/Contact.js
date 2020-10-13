@@ -5,6 +5,8 @@ import { faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
 import { faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+import contactImage from '../../../images/landing/contact-image.svg';
+
 export default class Contact extends Component {
     render() {
 
@@ -52,6 +54,9 @@ export default class Contact extends Component {
                             </a>
                         </div>
                     </div>
+                </div>
+                <div className="image">
+                    <img src={ contactImage } alt=""/>
                 </div>
             </div>
         )

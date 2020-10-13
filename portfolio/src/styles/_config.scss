@@ -11,6 +11,11 @@ $project-overlay-animation-duration: .5s;
     }
 }
 
+@mixin desktop-md {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
 @mixin desktop-sm {
     @media (max-width: 1000px) {
         @content;

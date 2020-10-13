@@ -611,6 +611,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: flex;
+  align-items: center;
 }
 
 .contact.hidden {
@@ -627,12 +632,32 @@
   bottom: auto;
 }
 
+.contact .container {
+  width: 50%;
+  min-width: 50%;
+  margin-right: 3rem;
+}
+
+.contact .image {
+  width: 100%;
+}
+
+@media (max-width: 1000px) {
+  .contact .image {
+    display: none;
+  }
+}
+
+.contact .image img {
+  width: 100%;
+}
+
 .contact.shown {
   bottom: 0;
   top: 0;
 }
 
-.contact.shown .container {
+.contact.shown .container, .contact.shown .image {
   opacity: 0;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
@@ -644,6 +669,11 @@
           animation-delay: 1.5s;
   -webkit-animation-name: fade;
           animation-name: fade;
+}
+
+.contact.shown .image {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
 }
 
 .contact .container {
