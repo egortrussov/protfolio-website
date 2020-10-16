@@ -410,6 +410,10 @@
             padding-left: 1rem;
         }
 
+        @include desktop-sm {
+            width: 100%;
+        }
+
         padding-left: 2rem;
 
         .heading {

@@ -686,6 +686,12 @@
   }
 }
 
+@media (max-width: 1000px) {
+  .contact .container {
+    width: 100%;
+  }
+}
+
 @media (min-width: 1250px) {
   .contact .container .heading h1 {
     font-size: 3.5vw;
