@@ -10,6 +10,7 @@
 
 html {
     overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -17,6 +18,7 @@ body {
     font-family: $main-font-family;
     background-color: $main-color-dark;
     color: #fff;
+    -webkit-overflow-scrolling: touch;
 }
 
 body::-webkit-scrollbar {

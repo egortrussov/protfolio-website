@@ -634,6 +634,7 @@
 
 .contact .container {
   width: 50%;
+  min-width: 50%;
   margin-right: 3rem;
 }
 
@@ -656,7 +657,7 @@
   top: 0;
 }
 
-.contact.shown .container {
+.contact.shown .container, .contact.shown .image {
   opacity: 0;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
@@ -670,6 +671,11 @@
           animation-name: fade;
 }
 
+.contact.shown .image {
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
 .contact .container {
   padding-left: 2rem;
 }
@@ -677,6 +683,12 @@
 @media (max-width: 500px) {
   .contact .container {
     padding-left: 1rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .contact .container {
+    width: 100%;
   }
 }
 
@@ -1600,6 +1612,7 @@
 
 html {
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -1607,6 +1620,7 @@ body {
   font-family: "Nunito", sans-serif;
   background-color: #002a25;
   color: #fff;
+  -webkit-overflow-scrolling: touch;
 }
 
 body::-webkit-scrollbar {
