@@ -14,7 +14,8 @@ export default class LandingPage extends Component {
             hide: null,
             show: null
         },
-        extraClasses: ['shown', 'hidden down', 'hidden down',]
+        extraClasses: ['shown', 'hidden down', 'hidden down',],
+        lastY: 0
     }
 
     componentDidMount() {
@@ -71,13 +72,24 @@ export default class LandingPage extends Component {
             })
             
         })
-        window.addEventListener('scroll', (e) => {
-            let { isAnimated, currentPage, pageNum, extraClasses } = this.state;
+        window.addEventListener('touchmove', (e) => {
+            console.log(e)
+            let { isAnimated, currentPage, pageNum, extraClasses, lastY } = this.state;
 
             if (isAnimated) 
                 return false;
             
-            let { deltaY } = e;
+            let deltaY = 1;
+
+            let currentY = e.touches[0].clientY
+
+            if (currentY < lastY) 
+                deltaY = -1; 
+
+            this.setState({
+                lastY: currentY
+            })
+
             if (deltaY < 0 && currentPage == 0 || deltaY > 0 && currentPage == pageNum - 1 || deltaY == 0) {
                 // console.log('object')
                 return false;
